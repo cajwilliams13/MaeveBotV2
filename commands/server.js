@@ -2,6 +2,13 @@ module.exports = {
     name: 'server',
     description: 'Server Info',
     execute(message, args) {
-        message.channel.send(`This server's name is: ${message.guild.name}\nTotal members: ${message.guild.memberCount}\nCreated At: ${message.guild.createdAt}\nRegion: ${message.guild.region}`);
+        message.channel.send(`
+**Server Name:** ${message.guild.name}
+**Total Members:** ${message.guild.memberCount}
+**Created At:** ${message.guild.createdAt}
+**Region:** ${message.guild.region}
+**Server Image** ${message.guild.iconURL}
+
+        **Courtesy of Maeve Bot**`);
     },
 };

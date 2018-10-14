@@ -3,7 +3,7 @@ module.exports = {
     description: 'Arguments info',
     args: true,
     execute(message, args) {
-        if (args[0] === 'foo') {
+        if (args[0] === 'neko') {
             return message.channel.send('Nyaa!');
         }
         message.channel.send(`First argument: ${args[0]}`);
