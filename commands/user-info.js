@@ -11,7 +11,7 @@ module.exports = {
 **Joined the Server:** ${message.member.joinedAt}
 **Time Joined:** ${message.member.joinedTimestamp}
 **Highest Role:** ${message.member.highestRole}
-**Role Colour:** ${message.member.displayColor}
+**Role Colour:** ${message.member.displayHexColor}
 
         **Courtesy of Maeve Bot**`);
     },
