@@ -12,6 +12,9 @@ module.exports = {
         if (args[0] === 'tobby') {
             return message.channel.send('<@104438871852335104> is the Infinity Esports mascot!')
         }
+        if (args[0 === 'KKCaila']) {
+            return message.channel.send("KKCaila or KKSailor?")
+        }
         message.channel.send(`First argument: ${args[0]}`);
     },
 };

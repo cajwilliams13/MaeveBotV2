@@ -2,6 +2,35 @@ module.exports = {
     name: 'maeve',
     description: 'Maeve is supreme',
     execute(message, args) {
-        message.channel.send('Maeve is the only champ worth ~~lewding~~ playing.(Edgy is near we must hide)');
-    },
-};
+        if(message.mentions.members.size) {
+            let member = message.mentions.members.first()
+            const rando_imgs = [
+                './images/Maeve/Nyah.png',
+                './images/Maeve/Maeve1.gif',
+                './images/Maeve/Maeve2.gif',
+                './images/Maeve/Maeve3.gif',
+                './images/Maeve/Maeve4.gif',
+                './images/Maeve/Maeve5.jpg',
+                './images/Maeve/Maeve6.jpg',
+               ]
+               message.channel.send(`Here is some Maeve ${member}.`, {
+               file: rando_imgs[Math.floor(Math.random() * rando_imgs.length)]
+               });
+           }
+        if(message.mentions.members.size == 0) {
+               let member = message.author
+            const rando_imgs = [
+                './images/Maeve/Nyah.png',
+                './images/Maeve/Maeve1.gif',
+                './images/Maeve/Maeve2.gif',
+                './images/Maeve/Maeve3.gif',
+                './images/Maeve/Maeve4.gif',
+                './images/Maeve/Maeve5.jpg',
+                './images/Maeve/Maeve6.jpg',
+                   ]
+                   message.channel.send(`Here is some Maeve ${member}. `, {
+                   file: rando_imgs[Math.floor(Math.random() * rando_imgs.length)]
+               }); 
+       }
+    }
+ };

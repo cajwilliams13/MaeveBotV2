@@ -1,13 +1,11 @@
 module.exports = {
-    name: 'user-info',
-    description: 'Full Info about the User',
+    name: 'user',
+    description: 'Info about the User',
     execute(message, args) {
         message.channel.send(`
 **Your Username:** ${message.author.username}
-**Your ID:** ${message.author.id}
-**Account Created At:** ${message.author.createdAt}
 **Your Nickname:** ${message.author.nickname}
-**Your Avatar:** ${message.author.displayAvatarURL}
+**Your ID:** ${message.author.id}
 
         **Courtesy of Maeve Bot**`);
     },
