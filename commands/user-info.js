@@ -1,6 +1,7 @@
 module.exports = {
     name: 'user-info',
     description: 'Full Info about the User',
+    guildOnly = true,
     execute(message, args) {
         message.channel.send(`
 **Your Username:** ${message.author.username}
