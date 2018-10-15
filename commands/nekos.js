@@ -13,4 +13,5 @@ module.exports = {
                 file: rando_imgs[Math.floor(Math.random() * rando_imgs.length)]
             });
         }
+    }
 };
