@@ -15,6 +15,6 @@ module.exports = {
         if (args[0 === 'KKCaila']) {
             return message.channel.send("KKCaila or KKSailor?")
         }
-        message.channel.send(`First argument: ${args[0]}`);
+        message.channel.send(`Arguments: ${args}\nArguments length: ${args.length}`);
     },
 };
