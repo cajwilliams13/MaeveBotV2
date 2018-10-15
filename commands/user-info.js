@@ -19,16 +19,21 @@ module.exports = {
         }
         const user = message.mentions.users.first();
         if (user) {
-            message.channel.send(`
-**Your Username:** ${message.user.username}
-**Your ID:** ${message.user.id}
-**Account Created At:** ${message.user.createdAt}
-**Your Nickname:** ${message.member.nickname}
-**Time Joined:** ${message.member.joinedAt}
-**Highest Role:** ${message.member.highestRole}
-**Role Colour:** ${message.member.displayHexColor}
-**Your Avatar:** ${message.user.displayAvatarURL}
-            `)
+            const member = message.guild.member(user);
+            if (member) {
+                    message.channel.send(`
+**Users Username:** ${user.username}
+**Users ID:** ${user.id}
+**Account Created At:** ${user.createdAt}
+**Users Nickname:** ${member.nickname}
+**Time Joined:** ${member.joinedAt}
+**Highest Role:** ${member.highestRole}
+**Role Colour:** ${member.displayHexColor}
+**Users Avatar:** ${user.displayAvatarURL}
+
+        **Courtesy of Maeve Bot**`);
+            }
         }
+        
     },
 };
