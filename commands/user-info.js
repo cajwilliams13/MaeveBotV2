@@ -6,12 +6,12 @@ module.exports = {
 **Your Username:** ${message.author.username}
 **Your ID:** ${message.author.id}
 **Account Created At:** ${message.author.createdAt}
-**Your Nickname:** ${message.GuildMember.nickname}
+**Your Nickname:** ${message.member.nickname}
 **Your Avatar:** ${message.author.displayAvatarURL}
-**Joined the Server:** ${message.GuildMember.joinedAt}
-**Time Joined:** ${message.GuildMember.joinedTimestamp}
-**Highest Role:** ${message.GuildMember.highestRole}
-**Role Colour:** ${message.GuildMember.displayColor}
+**Joined the Server:** ${message.member.joinedAt}
+**Time Joined:** ${message.member.joinedTimestamp}
+**Highest Role:** ${message.member.highestRole}
+**Role Colour:** ${message.member.displayColor}
 
         **Courtesy of Maeve Bot**`);
     },
