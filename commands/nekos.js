@@ -7,9 +7,18 @@ module.exports = {
         const rando_imgs = [
             'https://cdn.nekos.life/neko/neko_007.jpg', 
             ]
-            message.channel.send(`${message.author} Have a neko ${member}. Nyaa!`, {
+            message.channel.send(`Have a neko ${member}. Nyaa!`, {
             file: rando_imgs[Math.floor(Math.random() * rando_imgs.length)]
             });
+        }
+        if(message.mentions.members.size == 0) {
+            let member = message.author
+            const rando_imgs = [
+                'https://cdn.nekos.life/neko/neko_007.jpg', 
+                ]
+                message.channel.send(`Have a neko ${member}. Nyaa!`, {
+                file: rando_imgs[Math.floor(Math.random() * rando_imgs.length)]
+                }); 
         }
     }
 };
