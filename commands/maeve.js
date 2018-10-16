@@ -12,6 +12,7 @@ module.exports = {
                 './images/Maeve/Maeve4.gif',
                 './images/Maeve/Maeve5.jpg',
                 './images/Maeve/Maeve6.jpg',
+                './images/Maeve/Maeve7.jpg',
                ]
                message.channel.send(`Here is some Maeve ${member}.`, {
                file: rando_imgs[Math.floor(Math.random() * rando_imgs.length)]
@@ -27,6 +28,7 @@ module.exports = {
                 './images/Maeve/Maeve4.gif',
                 './images/Maeve/Maeve5.jpg',
                 './images/Maeve/Maeve6.jpg',
+                './images/Maeve/Maeve7.jpg',
                    ]
                    message.channel.send(`Here is some Maeve ${member}. `, {
                    file: rando_imgs[Math.floor(Math.random() * rando_imgs.length)]
