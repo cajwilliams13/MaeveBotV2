@@ -6,8 +6,8 @@ module.exports = {
          let member = message.mentions.members.first()
         const rando_imgs = [
             'https://cdn.nekos.life/neko/neko_007.jpg',
-            './images/ouchy.png',
-            './images/caj_likes_neko.png',
+            './images/Nekos/ouchy.png',
+            './images/Nekos/caj_likes_neko.png',
             'https://cdn.nekos.life/neko/neko249.jpg',
             'https://cdn.nekos.life/neko/neko_117.png',
             'https://cdn.nekos.life/neko/neko183.jpg',
