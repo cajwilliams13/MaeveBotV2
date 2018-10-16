@@ -11,8 +11,6 @@ module.exports = {
 **Account Created At:** ${message.author.createdAt}
 **Your Nickname:** ${message.member.nickname}
 **Time Joined:** ${message.member.joinedAt}
-**Highest Role:** ${message.member.highestRole}
-**Role Colour:** ${message.member.displayHexColor}
 **Your Avatar:** ${message.author.displayAvatarURL}
 
         **Courtesy of Maeve Bot**`);
@@ -27,8 +25,6 @@ module.exports = {
 **Account Created At:** ${user.createdAt}
 **Users Nickname:** ${member.nickname}
 **Time Joined:** ${member.joinedAt}
-**Highest Role:** ${member.highestRole}
-**Role Colour:** ${member.displayHexColor}
 **Users Avatar:** ${user.displayAvatarURL}
 
         **Courtesy of Maeve Bot**`);
