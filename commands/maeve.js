@@ -14,7 +14,7 @@ module.exports = {
                 './images/Maeve/Maeve6.jpg',
                 './images/Maeve/Maeve7.jpg',
                ]
-               message.channel.send(`Here is some Maeve ${member}.`, {
+               message.channel.send(`Here is some Maeve ${member}. <:MaeveRaeve:499130281920299009>`, {
                file: rando_imgs[Math.floor(Math.random() * rando_imgs.length)]
                });
            }
@@ -30,7 +30,7 @@ module.exports = {
                 './images/Maeve/Maeve6.jpg',
                 './images/Maeve/Maeve7.jpg',
                    ]
-                   message.channel.send(`Here is some Maeve ${member}. `, {
+                   message.channel.send(`Here is some Maeve ${member}. <:MaeveRaeve:499130281920299009>`, {
                    file: rando_imgs[Math.floor(Math.random() * rando_imgs.length)]
                }); 
        }
