@@ -15,14 +15,14 @@ module.exports = {
                 './images/Maeve/Maeve7.jpg',
                ]
                message.channel.send(`Here is some Maeve ${member}. <:MaeveRaeve:499130281920299009>`, {
-               file: rando_imgs[Math.floor(Math.random() * rando_imgs.length)]
-               },
-               message.channel.send('Debugging info: '+JSON.stringify(rando_imgs))
-               .then(function (message) {
-                message.react("<:MaeveRaeve:499130281920299009>`,")
-                message.react("<:hug:478531781751209984>")
-            })
-               );
+                file: rando_imgs[Math.floor(Math.random() * rando_imgs.length)]
+               }) .then(function (message) {
+                    message.react(":MaeveRaeve:499130281920299009"); 
+                }).catch(function(e) {
+                    console.log(e), {
+                    //Something
+                   }
+                    });
            }
         if(message.mentions.members.size == 0) {
                let member = message.author
