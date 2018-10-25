@@ -1,6 +1,5 @@
 const fs = require('fs');
 const Discord = require('discord.js');
-const music = require('discord.js-music-v11');
 const { prefix, token } = require('./config.json');
 
 const client = new Discord.Client();
@@ -51,5 +50,4 @@ client.on('guildMemberAdd', member => {
 	if (!channel) return;
 	channel.send(`Welcome, ${member}`);
   });
-music(client);
 client.login(token);
