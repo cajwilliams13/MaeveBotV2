@@ -9,7 +9,6 @@ module.exports = {
                     message.reply('Connected!')
                     const dispatcher = connection.playFile('./Music/test.mp3')
                 })
-                .catch(console.error);
             },
 
 };
