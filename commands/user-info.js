@@ -1,7 +1,6 @@
 module.exports = {
     name: 'user-info',
     description: 'Full Info about the User',
-    guildOnly: true,
     aliases: 'user, userinfo',
     execute(message, args) {
         if (!message.mentions.users.size) {
