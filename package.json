@@ -15,6 +15,7 @@
   "license": "ISC",
   "description": "Maeve Bot. Originally a hobby project i want to make this bot my wildest dreams.",
   "engines": {
-    "node": "8.9.4"
+    "node": "8.9.4",
+    "npm": "6.4.1"
   }
 }
