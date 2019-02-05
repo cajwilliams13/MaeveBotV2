@@ -1,6 +1,7 @@
 const fs = require('fs');
 const Discord = require('discord.js');
-const { prefix, token } = require('./config.json');
+const {token} = require('./config.json');
+const botconfig = require("./config.json"); 
 
 const client = new Discord.Client();
 client.commands = new Discord.Collection();
@@ -13,10 +14,21 @@ for (const file of commandFiles) {
 }
 
 client.on('ready', () => {
+
 	console.log('Started!');
 });
 
 client.on('message', message => {
+	let prefixes = JSON.parse(fs.readFileSync("./prefixes.json"));
+
+	if (!prefixes[message.guild.id]){
+		prefixes[message.guild.id] = {
+			prefixes: botconfig.prefix,
+		};
+	}
+
+	let prefix = prefixes[message.guild.id].prefixes;
+
 	if (!message.content.startsWith(prefix) || message.author.bot) return;
 
 	const args = message.content.slice(prefix.length).split(/ +/);
@@ -43,6 +55,8 @@ client.on('message', message => {
 		console.error(error);
 		message.reply('there was an error trying to execute that command!');
 	}
+	
+	
 });
 
 client.on('guildMemberAdd', member => {
