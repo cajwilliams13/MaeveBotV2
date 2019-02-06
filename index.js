@@ -1,7 +1,7 @@
 const fs = require('fs');
 const Discord = require('discord.js');
 const {token} = require('./config.json');
-const botconfig = require("./config.json"); 
+const botconfig = require('./config.json'); 
 
 const client = new Discord.Client();
 client.commands = new Discord.Collection();
@@ -58,15 +58,21 @@ client.on('message', message => {
 	
 	
 });
-
+const greeting_channels = [
+	'general',
+	'welcome',
+	'hello',
+	'goodbye',
+	'hello-and-goodbye',
+]
 client.on('guildMemberAdd', member => {
-	const channel = member.guild.channels.find(ch => ch.name === 'general');
+	const channel = member.guild.channels.find(ch => ch.name === greeting_channels);
 	if (!channel) return;
 	channel.send(`Welcome, ${member}`);
 
 });
 client.on('guildMemberLeave', member => {
-	const channel = member.guild.channels.find(ch => ch.name === 'general');
+	const channel = member.guild.channels.find(ch => ch.name === greeting_channels);
 	if (!channel) return;
 	channel.send(`Goodbye ${member} :cry:`)
 });
