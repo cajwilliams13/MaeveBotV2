@@ -3,7 +3,7 @@ module.exports = {
 	description: 'Prune up to 100 messages from within the last 2 weeks.',
 	execute(message, args) {
 		const amount = parseInt(args[0]) + 1;
-		if (message.author.permission = 'MANAGE_MESSAGES') {
+		if (message.author.hasPermission('MANAGE_MESSAGES')) {
 			if (isNaN(amount)) {
 				return message.reply('that doesn\'t seem to be a valid number.');
 			}
