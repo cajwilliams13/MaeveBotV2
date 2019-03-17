@@ -19,17 +19,9 @@ client.on('ready', () => {
 });
 
 client.on('message', message => {
-	let prefixes = JSON.parse(fs.readFileSync("./prefixes.json"));
+	let prefix = botconfig.prefix;
 
-	if (!prefixes[message.guild.id]){
-		prefixes[message.guild.id] = {
-			prefixes: botconfig.prefix,
-		};
-	}
-
-	let prefix = prefixes[message.guild.id].prefixes;
-
-	if (!message.content.startsWith(prefix) || message.author.bot) return;
+	if (!message.content.startsWith(prefix, "#") || message.author.bot) return;
 
 	const args = message.content.slice(prefix.length).split(/ +/);
 	const commandName = args.shift().toLowerCase();
