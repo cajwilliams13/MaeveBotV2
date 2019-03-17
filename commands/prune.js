@@ -13,6 +13,9 @@ module.exports = {
 		}
 		else {
 			message.channel.send("You do not have the required permissions to prume messages.")
+			.then(msg => {
+				msg.delete(10000)
+			  })
 		} 
 			message.channel.bulkDelete(amount, true).catch(err => {
 			console.error(err);
