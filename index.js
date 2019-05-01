@@ -1,3 +1,4 @@
+const paladins = req('paladins-api');
 const fs = require('fs');
 const Discord = require('discord.js');
 const {token} = require('./config.json');
@@ -7,7 +8,7 @@ const client = new Discord.Client();
 client.commands = new Discord.Collection();
 
 const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('.js'));
-
+const pal = new paladins('3187', '518641FACB81443090DBAD673C8B38E9	');
 for (const file of commandFiles) {
 	const command = require(`./commands/${file}`);
 	client.commands.set(command.name, command);
@@ -17,11 +18,11 @@ client.on('ready', () => {
 
 	console.log('Started!');
 });
-
+//commands
 client.on('message', message => {
 	let prefix = botconfig.prefix;
 
-	if (!message.content.startsWith(prefix, "#") || message.author.bot) return;
+	if (!message.content.startsWith(prefix) || message.author.bot) return;
 
 	const args = message.content.slice(prefix.length).split(/ +/);
 	const commandName = args.shift().toLowerCase();
@@ -50,22 +51,19 @@ client.on('message', message => {
 	
 	
 });
-const greeting_channels = [
-	'general',
-	'welcome',
-	'hello',
-	'goodbye',
-	'hello-and-goodbye',
-]
-client.on('guildMemberAdd', member => {
-	const channel = member.guild.channels.find(ch => ch.name === greeting_channels);
-	if (!channel) return;
-	channel.send(`Welcome, ${member}`);
+//Chat bot
 
-});
-client.on('guildMemberLeave', member => {
-	const channel = member.guild.channels.find(ch => ch.name === greeting_channels);
-	if (!channel) return;
-	channel.send(`Goodbye ${member} :cry:`)
-});
+// const greeting_channels 
+// client.on('guildMemberAdd', member => {
+// 	const channel = member.guild.channels.find(ch => ch.name === greeting_channels);
+// 	if (!channel) return;
+	// channel.send(`Welcome, ${member}`);
+
+// });
+	//FIX THIS
+// client.on('guildMemberLeave', member => {
+// 	const channel = member.guild.channels.find(ch => ch.name === greeting_channels);
+// 	if (!channel) return;
+// 	channel.send(`Goodbye ${member} :cry:`)
+// });
 client.login(token);

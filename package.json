@@ -5,7 +5,8 @@
   "dependencies": {
     "discord.js": "^11.4.2",
     "ffmpeg-binaries": "^4.0.0",
-    "opusscript": "0.0.6"
+    "opusscript": "0.0.6",
+    "paladins-api": "^1.5.5"
   },
   "devDependencies": {},
   "scripts": {
