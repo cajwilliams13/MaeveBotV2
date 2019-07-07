@@ -14,10 +14,6 @@ for (const file of commandFiles) {
 	client.commands.set(command.name, command);
 }
 
-client.on('ready', () => {
-
-	console.log('Started!');
-});
 //commands
 client.on('message', message => {
 	let prefix = botconfig.prefix;
@@ -51,6 +47,26 @@ client.on('message', message => {
 	
 	
 });
+//paladins commands
+client.on('message', message => {
+	if (!message.content.startsWith(`~`) || message.author.bot) return;
+	var sessionId;
+	pal.connect(
+  		"PC",
+  		(err, res) => {
+    		if (!err) {
+				  sessionId = res;
+				  online = true;
+    		}
+  		}
+	);
+	if (message.content = `stats`) {
+		pal.getPlayer(sessionId, "PC", "Cajwilliams", (err, res) => {
+			console.log(res);
+		});
+	}
+	
+})
 //Chat bot
 
 // const greeting_channels 
