@@ -1,4 +1,4 @@
-const paladins = req('paladins-api');
+const paladins = require('paladins-api');
 const fs = require('fs');
 const Discord = require('discord.js');
 const {token} = require('./config.json');
